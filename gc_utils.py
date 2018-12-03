@@ -52,12 +52,12 @@ def vector_to_dictionary(theta):
     Unroll all our parameters dictionary from a single vector satisfying our specific required shape.
     """
     parameters = {}
-    parameters["W1"] = theta[:20].reshape((5,4))
-    parameters["b1"] = theta[20:25].reshape((5,1))
-    parameters["W2"] = theta[25:40].reshape((3,5))
-    parameters["b2"] = theta[40:43].reshape((3,1))
-    parameters["W3"] = theta[43:46].reshape((1,3))
-    parameters["b3"] = theta[46:47].reshape((1,1))
+    parameters["W1"] = theta[:24].reshape((3,8))
+    parameters["b1"] = theta[24:32].reshape((8,1))
+    parameters["W2"] = theta[32:72].reshape((8,5))
+    parameters["b2"] = theta[72:77].reshape((5,1))
+    parameters["W3"] = theta[77:92].reshape((5,3))
+    parameters["b3"] = theta[92:95].reshape((3,1))
 
     return parameters
 
